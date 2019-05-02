@@ -10,6 +10,10 @@
 		BE08FEED2247913C00CA6B8B /* FileManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE08FEE32247913C00CA6B8B /* FileManager.framework */; };
 		BE08FEF22247913C00CA6B8B /* FileManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE08FEF12247913C00CA6B8B /* FileManagerTests.swift */; };
 		BE08FEF42247913C00CA6B8B /* FileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = BE08FEE62247913C00CA6B8B /* FileManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BE08FEFE2247914700CA6B8B /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE08FEFD2247914700CA6B8B /* FileManager.swift */; };
+		BE08FF002247918200CA6B8B /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE08FEFF2247918200CA6B8B /* Error.swift */; };
+		BE08FF05224791D700CA6B8B /* first.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BE08FF03224791D700CA6B8B /* first.jpg */; };
+		BE08FF06224791D700CA6B8B /* second.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BE08FF04224791D700CA6B8B /* second.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +33,10 @@
 		BE08FEEC2247913C00CA6B8B /* FileManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FileManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE08FEF12247913C00CA6B8B /* FileManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerTests.swift; sourceTree = "<group>"; };
 		BE08FEF32247913C00CA6B8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE08FEFD2247914700CA6B8B /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		BE08FEFF2247918200CA6B8B /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		BE08FF03224791D700CA6B8B /* first.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = first.jpg; sourceTree = "<group>"; };
+		BE08FF04224791D700CA6B8B /* second.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = second.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +81,8 @@
 			children = (
 				BE08FEE62247913C00CA6B8B /* FileManager.h */,
 				BE08FEE72247913C00CA6B8B /* Info.plist */,
+				BE08FEFD2247914700CA6B8B /* FileManager.swift */,
+				BE08FEFF2247918200CA6B8B /* Error.swift */,
 			);
 			path = FileManager;
 			sourceTree = "<group>";
@@ -80,10 +90,20 @@
 		BE08FEF02247913C00CA6B8B /* FileManagerTests */ = {
 			isa = PBXGroup;
 			children = (
+				BE08FF07224791DA00CA6B8B /* Resources */,
 				BE08FEF12247913C00CA6B8B /* FileManagerTests.swift */,
 				BE08FEF32247913C00CA6B8B /* Info.plist */,
 			);
 			path = FileManagerTests;
+			sourceTree = "<group>";
+		};
+		BE08FF07224791DA00CA6B8B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BE08FF03224791D700CA6B8B /* first.jpg */,
+				BE08FF04224791D700CA6B8B /* second.jpg */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +168,7 @@
 				TargetAttributes = {
 					BE08FEE22247913C00CA6B8B = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					BE08FEEB2247913C00CA6B8B = {
 						CreatedOnToolsVersion = 10.1;
@@ -184,6 +205,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE08FF05224791D700CA6B8B /* first.jpg in Resources */,
+				BE08FF06224791D700CA6B8B /* second.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +217,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE08FF002247918200CA6B8B /* Error.swift in Sources */,
+				BE08FEFE2247914700CA6B8B /* FileManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +366,7 @@
 		BE08FEF82247913C00CA6B8B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -358,6 +384,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = mad.max.FileManager;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -366,6 +393,7 @@
 		BE08FEF92247913C00CA6B8B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -391,6 +419,7 @@
 		BE08FEFB2247913C00CA6B8B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9C89665RJA;
 				INFOPLIST_FILE = FileManagerTests/Info.plist;
@@ -409,6 +438,7 @@
 		BE08FEFC2247913C00CA6B8B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9C89665RJA;
 				INFOPLIST_FILE = FileManagerTests/Info.plist;
